@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Celio Entertainment</title>
+  <style>
+  
+  /* HEADER STYLES */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  border-bottom: 1px solid #222;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.menu-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  filter: /* makes black PNG white on dark bg */
+}
+
+/* DROPDOWN MENU */
+nav {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  background-color: #111;
+  border: 1px solid #333;
+  padding: 10px 0;
+  display: none;
+  flex-direction: column;
+  width: 180px;
+  border-radius: 5px;
+}
+
+nav a {
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background-color: #222;
+}
+
+.show-menu {
+  display: flex;
+}
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      scroll-behavior: smooth;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow-x: hidden;
+    }
+
+		section {
+	  width: 100%;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  text-align: center;
+	  position: relative;
+	  padding: 60px 20px; /* You can tweak this gap manually */
+	}
+
+	#hero {
+	  height: 100vh;
+	  background-color: #000;
+	  position: sticky;
+	  top: 0;
+	  z-index: 1;
+	}
+
+    }
+
+    #hero-content {
+      transition: opacity 0.3s, transform 0.3s;
+    }
+
+    h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .coming-soon {
+      font-size: 2rem;
+      font-weight: 300;
+      opacity: 0.8;
+    }
+
+    #explore {
+      background-color: #000;
+      flex-direction: column;
+    }
+
+    #explore h2 {
+      font-size: 2rem;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #888;
+      background-color: #000;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .coming-soon {
+        font-size: 1.5rem;
+      }
+
+      #explore h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<style>
+/* Sub-menu (for Characters) */
+.sub-menu {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  background-color: #111;
+  border: 1px solid #333;
+  display: none;
+  flex-direction: column;
+  width: 160px;
+  border-radius: 5px;
+  z-index: 1001;
+}
+
+nav a.sub-dropdown {
+  position: relative;
+}
+
+nav a.sub-dropdown:hover + .sub-menu,
+.sub-menu:hover {
+  display: flex;
+}
+
+.sub-menu {
+  position: absolute;
+  top: 0;
+  right: 100%; /* shows on the left side, change to left: 100% if you want right side */
+  background-color: #111;
+  border: 1px solid #333;
+  display: none;
+  flex-direction: column;
+  width: 160px;
+  border-radius: 5px;
+  z-index: 1001;
+
+  max-height: 200px;    /* Max height before scrolling */
+  overflow-y: auto;     /* Enable vertical scrolling */
+  scrollbar-width: thin;  /* Firefox scrollbar */
+  scrollbar-color: #444 #111; /* thumb and track colors */
+}
+
+/* Optional: Styling the scrollbar for Webkit browsers */
+.sub-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sub-menu::-webkit-scrollbar-track {
+  background: #111;
+  border-radius: 5px;
+}
+
+.sub-menu::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 5px;
+}
+
+
+</style>
+<header>
+  <img src="Logo.png" alt="Celio Poster" width="200" />
+  <div class="menu-icon" id="menuToggle">&#9776;</div>
+  <nav id="dropdownMenu">
+   <a href="Homepage.html">Homepage</a>
+    <a href="#">News</a>
+    <a href="#" class="sub-dropdown">Characters</a>
+		<div class="sub-menu">
+		<a href="mianganduyvette.html">Mia Ngandu Yvette</a>
+		<a href="wesleynganduyvette.html">Wesley Ngandu Yvette</a>
+		<a href="berkeleyyvette">Berkeley Yvette</a>
+		<a href="carmelayvette">Carmela Yvette</a>
+		<a href="samsonyvette.html">Samson Yvette</a>
+		<a href="haileyyvette.html">Hailey Yvette</a>
+		<a href="luzyvette.html">Luz Yvette</a>
+		<a href="chantegonzale.html">Chanté Gonzale</a>
+		<a href="murilloyvette.html">Murillo Yvette</a>
+		<a href="jordanyvette.html">Jordan Yvette</a>
+		<a href="jaquelleyvette.html">Jaquelle Yvette</a>
+		<a href="peacesabelele.html">Peace Sabelele</a>
+		<a href="lilymoller.html">Lily Møller</a>
+		<a href="tristanpeterson.html">Tristan Peterson</a>
+		<a href="thembakazimudimo.html">Thembakazi Mudimo</a>
+		<a href="brentwagolanga.html">Brent Wago'Langa</a>
+		<a href="zaidwagolanga.html">Zaid Wago'Langa</a>
+		<a href="dereksolomon.html">Derek Solomon</a>
+		<a href="ayeshamalik.html">Ayesha Malik</a>
+		<a href="garethmandoe.html">Gareth Mandoe</a>
+		<a href="laylarosianna.html">Layla Rosianna</a>
+		<a href="agentfranciswinen.html">Agent Francis Winen</a>
+		<a href="dolphsingapi.html">Dolph Singapi</a>
+		<a href="kaelinabrawns.html">Kaelina Brawn's</a>
+		<a href="agentlucasalvarez.html">Agent Lucas Alvarez</a>
+		<a href="agentmancinilopez.html">Agent Mancini Lopez</a>
+		<a href="agenthudsonmarcus.html">Agent Hudson Marcus</a>
+		<a href="agentlecraeanderson.html">Agent Lecrae Anderson</a>
+		<a href="agentsipholutho.html">Agent Sipho Lutho</a>
+		<a href="commissionergarrisonoconner.html">Commissioner Garrison O'Conner</a>
+		<a href="agentthandokagisho.html">Agent Thando Kagisho</a>
+		<a href="mrkzimusa.html">Mr. K. Zimusa</a>
+		<a href="mrnmakhoba.html">Mr. N. Makhoba</a>
+		<a href="theoldcommissioner.html">The Old Commissioner</a>
+		<a href="mrsatkinsons.html">Mrs. Atkinsons</a>
+		<a href="zoran.html">Zoran</a>
+		<a href="malume.html">Malume</a>
+		<a href="sussecurityguard.html">Sus Security Guard</a>
+		<a href="zenith.html">Zenith</a>
+		<a href="michellequinn.html">Michelle Quinn</a>
+		<a href="mxolisismith.html">Mxolisi Smith</a>
+		<a href="vicepresidentsbusisosmith.html">Vice President Sbusiso Smith</a>
+		<a href="dinnymalkov.html">Dinny Malkov</a>
+		<a href="makhoenamudimo.html">Makhoena Mudimo</a>
+		<a href="tshiamomudimo.html">Tshiamo Mudimo</a>
+		<a href="mbargangandu.html">Mbarga Ngandu</a>
+		<a href="presidentmzimkhulu.html">President Mzimkhulu</a>
+		<a href="aminatoungandu.html">Aminatou Ngandu</a>
+		<a href="mrsbritneyalvarez.html">Mrs. Britney Alvarez</a>
+		<a href="principledanielson.html">Principle Danielson</a>
+		<a href="thatomombai.html">Thato Mombai</a>
+		<a href="chumawagolanga.html">Chuma Wago'Langa</a>
+		<a href="aviweaphelele.html">Aviwe Aphelele</a>
+		<a href="msntosh.html">Ms. Ntosh</a>
+		<a href="olisadube.html">Olisa Dube</a>
+		<a href="#"></a>
+		</div>
+    <a href="#">Movies</a>
+    <a href="#">TV Shows</a>
+    <a href="#">Podcasts</a>
+  </nav>
+</header>
+
+
+  <!-- HERO SECTION -->
+  <section id="hero">
+    <div id="hero-content">
+      <h1>Wesley Ngandu Yvette</h1>
+    </div>
+  </section>
+  
+  
+  
+  
+    <!-- FOOTER -->
+  <style>
+#intro {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 20px; /* Top-bottom | Left-right */
+  text-align: center;
+}
+
+.intro-container {
+  max-width: 800px;     /* Keep content tight */
+  margin: 0 auto;       /* Center the box */
+  padding: 0 20px;      /* Prevent touching screen edges */
+}
+
+#intro h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+#intro p {
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+.button-row {
+  display: flex;
+  justify-content: center; /* or 'space-between', 'space-around', 'flex-start' */
+  gap: 20px; /* spacing between buttons */
+  margin-top: 30px;
+  flex-wrap: wrap; /* allow wrapping on small screens */
+}
+
+.button-image {
+  width: 150px; /* adjust size */
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 8px; /* optional: rounded corners */
+  border: none;
+}
+
+.button-image:hover {
+  transform: scale(1.05);
+}
+
+</style>
+<style>
+img.button-image {
+  transition: transform 0.3s ease;
+}
+
+img.button-image:hover {
+  transform: scale(1.05);
+}
+</style>
+  <footer>
+    &copy; <span id="year"></span> Celio Entertainment. All rights reserved.
+  <p class="paragraph-gap"></p>
+  <div class="footer-column">
+    <h4>Contact</h4>
+    <p>Email: info@celioentertainment.com</p>
+    <p>Phone: +27 12 345 6789</p>
+  </div>
+  
+  <div class="button-row">
+  <a href="https://www.youtube.com/">
+    <img src="YouTube.jpg" alt="Button 1" class="button-image" style="width:20px; height:auto; cursor:pointer;">
+  </a>
+  <a href="https://x.com/">
+    <img src="X.jpg" alt="Button 2" class="button-image" style="width:20px; height:auto; cursor:pointer;">
+  </a>
+  <a href="https://www.webtoons.com/en/">
+    <img src="Webtoon.jpg" alt="Button 3" class="button-image" style="width:20px; height:auto; cursor:pointer;">
+  </a>
+  <a href="https://www.tiktok.com/">
+    <img src="TikTok.jpg" alt="Button 1" class="button-image" style="width:20px; height:auto; cursor:pointer;">
+  </a>
+  <a href="https://www.instagram.com/">
+    <img src="Instagram.jpg" alt="Button 3" class="button-image" style="width:25px; height:auto; cursor:pointer;">
+  </a>
+  <a href="https://www.facebook.com/">
+    <img src="Facebook.jpg" alt="Button 3" class="button-image" style="width:24px; height:auto; cursor:pointer;">
+  </a>
+</div>
+
+</a>
+
+  
+  </footer>
+
+  <!-- SCRIPT FOR YEAR + SCROLL EFFECT -->
+  <script>
+    // Set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Fade + scale hero on scroll
+    const heroContent = document.getElementById('hero-content');
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      const maxScroll = window.innerHeight;
+      const opacity = 1 - scrollY / maxScroll;
+      const scale = 1 - scrollY / (maxScroll * 3);
+
+      heroContent.style.opacity = opacity;
+      heroContent.style.transform = `scale(${Math.max(scale, 0.3)})`;
+    });
+  </script>
+  
+  <script>
+  const menuToggle = document.getElementById('menuToggle');
+  const dropdownMenu = document.getElementById('dropdownMenu');
+
+  menuToggle.addEventListener('click', () => {
+    dropdownMenu.classList.toggle('show-menu');
+  });
+
+  // Optional: click outside to close
+  window.addEventListener('click', function(e) {
+    if (!menuToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+      dropdownMenu.classList.remove('show-menu');
+    }
+  });
+</script>
+
+</body>
+</html>
